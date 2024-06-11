@@ -21,12 +21,12 @@
     </section>
 
 
-    <section class="max-w-screen-sm flex flex-col mx-auto p-8 pt-8 ">
-      <p class="text-gray-200 font-bold">Published Articles</p>
-      <div class="bg-gray-300 text-xs md:text-sm text-gray-900 m-2 p-2 border rounded">
-        No articles published yet.
-      </div>
-    </section>
+    <!-- <section class="max-w-screen-sm flex flex-col mx-auto p-8 pt-8 "> -->
+    <!--   <p class="text-gray-200 font-bold">Published Articles</p> -->
+    <!--   <div class="bg-gray-300 text-xs md:text-sm text-gray-900 m-2 p-2 border rounded"> -->
+    <!--     No articles published yet. -->
+    <!--   </div> -->
+    <!-- </section> -->
 
     <section class="max-w-screen-sm mx-auto flex flex-col gap-2 p-8 pt-4 pb-32" id="target">
       <p class="text-gray-200 font-bold">Proposition Form</p>
