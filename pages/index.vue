@@ -23,12 +23,12 @@
 
     <section class="max-w-screen-sm flex flex-col mx-auto p-8 pt-8 ">
       <p class="text-gray-200 font-bold">Published Articles</p>
-      <div class="bg-gray-300 text-xs md:text-sm text-gray-900 m-2 p-2 border rounded-lg">
-        No articles Published yet.
+      <div class="bg-gray-300 text-xs md:text-sm text-gray-900 m-2 p-2 border rounded">
+        No articles published yet.
       </div>
     </section>
 
-    <section class="max-w-screen-sm mx-auto flex flex-col gap-2 p-8 pt-8 pb-32" id="target">
+    <section class="max-w-screen-sm mx-auto flex flex-col gap-2 p-8 pt-4 pb-32" id="target">
       <p class="text-gray-200 font-bold">Proposition Form</p>
       <p class="text-gray-500 px-3 py-1 text-xs md:text-sm">
       We select projects not solely for their financial return, but for their alignment with our intellectual interests. We primarily focus on solving simple problems—or a collection of simple problems—using a strictly first-principles and modular approach, aiming for solutions that will remain effective for decades to come. Currently, our focus is more on software.</p>
@@ -39,7 +39,7 @@
       <p class="text-gray-500 px-3 py-1 text-xs md:text-sm"> # Please explain in length. You can expand input fields by dragging down from bottom-right corner.
       </p>
 
-      <button type="submit" class="bg-blue-500 w-fit text-xs md:text-sm hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
+      <button type="submit" class="bg-blue-500 w-fit text-xs md:text-sm hover:bg-blue-600 text-white font-bold mx-3 py-2 px-4 rounded">Submit</button>
     </section>
 
   </div>
