@@ -1,101 +1,93 @@
+
+
 <template>
+  <div class="w-full min-h-screen bg-gray-950">
 
-  <div class="w-full min-h-screen bg-black">
-
-    <!-- Navigation Bar -->
-    <section class="max-w-screen-lg mx-auto p-4 flex justify-between items-center">
-
-      <NuxtLink to="/" class="z-10 text-3xl font-semibold text-gray-300">S</NuxtLink>
-
-      <div class="absolute md:static z-0 md:z-10 flex flex-col md:flex-row items-center gap-2 md:gap-10 min-h-[50vh] md:min-h-fit left-0 w-full md:w-auto font-extralight text-white duration-500 bg-black" :class="showDropdownMenu ? 'top-[9%]' : 'top-[-100%]'">
-        <NuxtLink to="/dashbaord" class="glow-text">Dashboard</NuxtLink>
-        <NuxtLink to="/showcases" class="glow-text">Showcases</NuxtLink>
-        <NuxtLink to="/philosophy" class="glow-text">Philosophy</NuxtLink>
-        <NuxtLink to="/about-us" class="glow-text">About Us</NuxtLink>
+    <section class="max-w-screen-sm mx-auto p-4 pt-12">
+      <h1 class="text-gray-200 font-extrabold md:font-extrabold text-xl md:text-2xl tracking-tighter">Symmetry Engineering Firm.</h1>
+      <p class="mt-4 mx-6 text-gray-400 text-sm md:text-base">Active in an array of engineering fields including computer software and hardware, electrical and mechanical systems, with an strong emphasis on scientific method. To contact us, fill the <a href="#target" class="border-b-2 border-white text-gray-300">form</a> and we'll be in touch.</p>
+    </section>
+    
+    <section class="max-w-screen-sm flex flex-col mx-auto p-8 pt-8 ">
+      <div class="grid grid-cols-3 grid-rows-3 gap-2 md:gap-3">
+        <div class="h-16 md:h-32 bg-gray-400 rounded-lg"></div>
+        <div class="bg-gray-400 row-span-2 rounded-lg"></div>
+        <div class="bg-gray-400 rounded-lg"></div>
+        <div class="bg-gray-400 row-span-2 rounded-lg"></div>
+        <div class="bg-gray-400 row-span-2 rounded-lg"></div>
+        <div class="bg-gray-400 rounded-lg"></div>
       </div>
-
-      <div class="z-10 flex items-center gap-3">
-        <NuxtLink to="/sign-in" class="border border-gray-300 text-gray-300 rounded-lg py-1 px-2 hover:cursor-pointer glow-on-hover"> Sign in </NuxtLink>
-        <button @click="toggleDropdownMenu()" name="menu" class="text-white cursor-pointer md:hidden duration-500">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
-            <path :d="showDropdownMenu
-            ? 'M 5,5 L 45,45 M 45,5 L 5,45'
-            : 'M 5 9 L 5 11 L 45 11 L 45 9 L 5 9 z M 5 24 L 5 26 L 45 26 L 45 24 L 5 24 z M 5 39 L 5 41 L 45 41 L 45 39 L 5 39 z'"/>
-          </svg>
-        </button>
-      </div>
-
+      <p class="text-gray-500 pt-3 text-xs md:text-sm"># Interdependent harmonic oscillation. An abstract phenomenon commonly observed in many distinct areas of nature in many different forms, as if by design.</p>
     </section>
 
 
-  <div class="max-w-screen-lg mx-auto text-center p-4 pt-24">
-    <p class="font-extrabold tracking-tight text-gray-200 text-5xl">Symmetry Engineering Firm.</p>
-    <p class="mt-4 mb-8 sm:px-16 xl:px-48 text-gray-400">
-    Specialized in an array of engineering and software solutions. Cross-platform software, systems design, cloud infrastructure and services, real-time electronic and embedded systems. </p>
-  </div>
+    <section class="max-w-screen-sm flex flex-col mx-auto p-8 pt-8 ">
+      <p class="text-gray-200 font-bold">Published Articles</p>
+      <div class="bg-gray-300 text-xs md:text-sm text-gray-900 m-2 p-2 border rounded-lg">
+        No articles Published yet.
+      </div>
+    </section>
 
-  <div class="max-w-screen-lg mx-auto text-center">
-    <a href="tg://resolve?domain=symmetryteam" class="p-2 px-3 rounded-lg text-white glow-animation">
-      Telegram Direct Message
-    </a>
-  </div>
+    <section class="max-w-screen-sm mx-auto flex flex-col gap-2 p-8 pt-8 pb-32" id="target">
+      <p class="text-gray-200 font-bold">Proposition Form</p>
+      <p class="text-gray-500 px-3 py-1 text-xs md:text-sm">
+      We select projects not solely for their financial return, but for their alignment with our intellectual interests. We primarily focus on solving simple problems—or a collection of simple problems—using a strictly first-principles and modular approach, aiming for solutions that will remain effective for decades to come. Currently, our focus is more on software.</p>
+
+      <textarea rows="1" placeholder="Please introduce yourself." class="w-full bg-gray-300 rounded p-2 text-sm"></textarea>
+      <textarea rows="2" placeholder="Tell us about the problem you're trying to solve." class="w-full bg-gray-300 rounded p-2 text-sm"></textarea>
+      <textarea rows="1" placeholder="How could we contact you?" class="w-full bg-gray-300 rounded p-2 text-sm"></textarea>
+      <p class="text-gray-500 px-3 py-1 text-xs md:text-sm"> # Please explain in length. You can expand input fields by dragging down from bottom-right corner.
+      </p>
+
+      <button type="submit" class="bg-blue-500 w-fit text-xs md:text-sm hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit</button>
+    </section>
 
   </div>
-
 </template>
-
-<script setup>
-
-const showDropdownMenu = ref(false);
-function toggleDropdownMenu() {
-  showDropdownMenu.value = !showDropdownMenu.value;
-}
-
-</script>
 
 
 <style scoped>
-@keyframes glow {
-    0%, 100% {
-        outline: 2px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3), inset 0 0 4px rgba(255, 255, 255, 0.2);
-    }
-    50% {
-        outline: 2px solid rgba(255, 255, 255, 0.6);
-        box-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.4);
-    }
+/* Keyframes for scaling animation */
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
-.glow-animation {
-    animation: glow 2s ease-in-out infinite;
-    position: relative; /* Ensure the glow is positioned correctly relative to the parent */
+/* Keyframes for subtle move */
+@keyframes subtleMove {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+  75% {
+    transform: translate(-5px, 5px);
+  }
 }
 
-.glow-text:hover {
-    color: #fff; /* Optional: change text color on hover */
-    text-shadow: 
-        0 0 8px rgba(255, 255, 255, 0.8),
-        0 0 10px rgba(255, 255, 255, 0.6),
-        0 0 12px rgba(204, 169, 44, 0.5); /* This color can be adjusted to fit your design */
-    transition: text-shadow 0.3s ease-in-out;
+/* General grid animation */
+.grid div {
+  animation: scalePulse 6s infinite ease-in-out, subtleMove 8s infinite ease-in-out;
+  will-change: transform;
 }
 
-/* Additional styles to enhance visibility and interaction */
-.glow-text {
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for mouse enter and leave */
-    cursor: pointer; /* Indicates that the element is interactive */
-}
+/* Individual delay for each grid cell to create staggered effect */
+.grid div:nth-child(1) { animation-delay: 0s, -0.5s; }
+.grid div:nth-child(2) { animation-delay: 0.1s, -0.6s; }
+.grid div:nth-child(3) { animation-delay: 0.2s, -0.7s; }
+.grid div:nth-child(4) { animation-delay: 0.3s, -0.8s; }
+.grid div:nth-child(5) { animation-delay: 0.4s, -0.9s; }
+.grid div:nth-child(6) { animation-delay: 0.5s, -1s; }
 
-.glow-on-hover {
-    position: relative; /* Ensure the glow is positioned correctly relative to the parent */
-    outline: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.1), inset 0 0 4px rgba(255, 255, 255, 0.1);
-    transition: outline 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
-}
-
-.glow-on-hover:hover {
-    outline: 2px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.4);
-}
 
 </style>
+
+
